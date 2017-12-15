@@ -14,9 +14,9 @@ import (
 )
 
 func onPageLoaded() {
-	for {
-		// Listen for the next incoming webpage data from the crawler.
-		data := <-onPageLoadedChan
+    for {
+        // Listen for the next incoming webpage data from the crawler.
+        data := <-onPageLoadedChan
         doc := data.Document
 
         // Implement the included scraping helper methods.
@@ -37,7 +37,7 @@ func main() {
     // Initialize the crawler.
     crawlerObj = &crawler.Crawler{
         StartURL:             "https://example.com/photos/switzerland",
-		OnPageLoadedListener: onPageLoadedChan,
+        OnPageLoadedListener: onPageLoadedChan,
     }
 
     // Begin the crawl.
