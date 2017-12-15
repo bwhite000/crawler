@@ -13,6 +13,8 @@ import (
     "github.com/bwhite000/go-crawler"
 )
 
+var onPageLoadedChan = make(chan *crawler.PageData)
+
 func onPageLoaded() {
     for {
         // Listen for the next incoming webpage data from the crawler.
@@ -35,7 +37,7 @@ func main() {
     log.Println("Beginning crawl...")
 
     // Initialize the crawler.
-    crawlerObj = &crawler.Crawler{
+    crawlerObj := &crawler.Crawler{
         StartURL:             "https://example.com/photos/switzerland",
         OnPageLoadedListener: onPageLoadedChan,
     }
