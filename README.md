@@ -28,7 +28,7 @@ func onPageLoaded() {
 }
 
 func init() {
-	go onPageLoaded()
+    go onPageLoaded()
 }
 
 func main() {
