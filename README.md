@@ -1,8 +1,8 @@
 Go Crawler
 ==========
 
-A web crawler package that can be used to traverse fully through a website and scrape
-data from the webpage's Document as the crawl progresses in the concurrently.
+A web crawler package that can be used to traverse through a website and scrape
+data from each webpage's Document as the crawl progresses concurrently.
 
 ~~~go
 package main
