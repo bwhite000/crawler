@@ -142,33 +142,33 @@ type Crawler struct {
 
 ### Properties
 
-#### `MaxFetches int`
+#### MaxFetches int
 
 The maximum number of pages to crawl before completing and exiting the crawl. Useful for testing purposes when setting the value to a lower amount, or for setting an upper limit to prevent very deep crawls.
 
-#### `RequestSpaceMs int`
+#### RequestSpaceMs int
 
 The amount of time in milliseconds to wait between page fetches. This can be used to avoid rate throttling and limiting situations from the website that the script is crawling.
 
-#### `IgnoreQueryParams bool`
+#### IgnoreQueryParams bool
 
 Specifies if the crawler should differentiate between already crawled pages based on the query parameter strings. The default value is `true` to ignore query string parameters. Some websites may have links to the same webpage multiple times with query string parameters to do not affect the page's contents and that would result in rescraping the same page repeatedly.
 
-#### `StartURL string`
+#### StartURL string
 
 The URL to begin the crawling process at.
 
-#### `OnPageLoadedListener chan<- *PageData`
+#### OnPageLoadedListener chan<- *PageData
 
 The channel that fetched page information structs will be pushed to when found. Listen on this channel in a loop to process crawled webpages.
 
 ### Methods
 
-#### `Begin() void`
+#### Begin() void
 
 Starts the crawl process using the specified values.
 
-#### `WasIndexed(url string) bool`
+#### WasIndexed(url string) bool
 
 Tests if the provided URL parameter has already been indexed by this crawl already.
 
@@ -183,11 +183,11 @@ type PageData struct {
 }
 ~~~
 
-#### `URL string`
+#### URL string
 
 The URL of the webpage that this struct represents.
 
-#### `Document *goquery.Document`
+#### Document *goquery.Document
 
 The `goquery` Document that this struct represents the DOM tree for.
 
