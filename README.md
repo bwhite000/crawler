@@ -68,7 +68,7 @@ type Scraper struct {
 }
 ~~~
 
-#### `Exists(selector string) bool`
+#### Exists(selector string) bool
 
 Checks if the selector matches an Element in the Document.
 
@@ -78,7 +78,7 @@ if scraper.Exists("[itemtype='http://schema.org/Product']") {
 }
 ~~~
 
-#### `Float(selector string) float64`
+#### Float(selector string) float64
 
 Gets the text content from the matched Element, then parses a float from the string.
 
@@ -86,7 +86,7 @@ Gets the text content from the matched Element, then parses a float from the str
 percentage := scraper.Float("#percentage-box")
 ~~~
 
-#### `GetAttr(selector string, attrName string) string`
+#### GetAttr(selector string, attrName string) string
 
 Gets the attribute value from the matched Element.
 
@@ -94,7 +94,7 @@ Gets the attribute value from the matched Element.
 title := scraper.GetAttr("meta[property='og:title']", "content")
 ~~~
 
-#### `Html(selector string) string`
+#### Html(selector string) string
 
 Get the inner HTML value from the matched Element.
 
@@ -102,7 +102,7 @@ Get the inner HTML value from the matched Element.
 divHTML := scraper.Html("div.elm-with-text")
 ~~~
 
-#### `Int(selector string) int`
+#### Int(selector string) int
 
 Gets the text content from the matched Element, then parses an integer from the string.
 
@@ -110,7 +110,7 @@ Gets the text content from the matched Element, then parses an integer from the 
 year := scraper.Int("div.year-container")
 ~~~
 
-#### `Text(selector string) string`
+#### Text(selector string) string
 
 Gets the text from the matched Element.
 
@@ -118,7 +118,7 @@ Gets the text from the matched Element.
 bank := scraper.Text("#bank-title-elm")
 ~~~
 
-#### `ToFloat(input string) float64`
+#### ToFloat(input string) float64
 
 Parses a float value from the provided string. It is okay to have non-numeric values on either side of the expected float in the string.
 
