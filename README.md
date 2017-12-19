@@ -195,7 +195,7 @@ Dependencies
 ------------
 
 * __html__ [https://golang.org/x/net/html] - Creates the parse tree from the fetched HTML string.
-* __goquery__ [https://github.com/PuerkitoBio/goquery]- Adds the ability to query Elements from the `html` package's parse tree using CSS selector syntax.
+* __goquery__ [https://github.com/PuerkitoBio/goquery] - Adds the ability to query Elements from the `html` package's parse tree using CSS selector syntax.
     * Depends on:
         * __cascadia__ [https://github.com/andybalholm/cascadia] - Implements CSS selectors for use with the parse trees produced by the `html` package.
         * __html__ [https://golang.org/x/net/html] - Please see above.
